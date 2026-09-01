@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric Fan | 商業策略・專案管理・AI 賦能</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=20260901_9">
+</head>
+<body>
+
+  <!-- 幾何粒子游標畫布 -->
+  <canvas id="cursor-canvas"></canvas>
+
+  <!-- 頂部導航列 (Navbar) -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-crown"><i class="fa-solid fa-crown"></i></span>
+        <span class="brand-text">ERIC.FAN</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="#about" class="nav-link">關於我</a>
+        <a href="#gallery-3d" class="nav-link">3D 視界</a>
+        <a href="#experience" class="nav-link">核心歷程</a>
+        <a href="#showcase" class="nav-link">數位成果</a>
+        <a href="#contact" class="nav-link nav-btn">下載作品集</a>
+      </nav>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="選單">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- 主視覺區塊 (Hero Section) -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-glow glow-gold"></div>
+    <div class="hero-bg-glow glow-pink"></div>
+    
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>國立臺北大學 企業管理學系</span>
+        </div>
+        <h1 class="hero-title">
+          STRATEGY &<br>
+          <span class="gold-gradient-text">INNOVATION</span>
+        </h1>
+        <p class="hero-subtitle">
+          以商管敏銳度為基石，深耕<strong>商業洞察、專案領導與自律實踐</strong>，融合 <strong>AI 數位工具賦能</strong>，打造具備國際視野的系統化商業價值。
+        </p>
+
+        <div class="hero-tags">
+          <span class="tech-tag"><i class="fa-solid fa-trophy"></i> ATCC 競賽複賽</span>
+          <span class="tech-tag"><i class="fa-solid fa-diagram-project"></i> PMI 專案代表</span>
+          <span class="tech-tag"><i class="fa-solid fa-mobile-screen-button"></i> 預算管理 App</span>
+          <span class="tech-tag"><i class="fa-solid fa-bolt"></i> AI 證照認證</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#experience" class="btn btn-primary">
+            <span>探索核心經歷</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="assests/pdf/大二個人作品集_compressed.pdf" target="_blank" class="btn btn-outline">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>完整作品集 PDF</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="avatar-frame">
+          <div class="avatar-border-glow"></div>
+          <div class="avatar-card">
+            <img src="形象照.png" alt="Eric Fan 形象照" class="avatar-img">
+            <div class="avatar-overlay">
+              <span class="avatar-label">BUSINESS & AI STRATEGIST</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 數據與理念亮點 (About / Stats Section) -->
+  <section class="stats-section" id="about">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-chess-knight"></i></div>
+          <div class="stat-number">2+</div>
+          <div class="stat-label">頂級商業與專案管理競賽</div>
+          <p class="stat-desc">ATCC 新創提案複賽・PMI 專案決賽代表隊伍</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <div class="stat-number">200+</div>
+          <div class="stat-label">演講與知識傳播觸及</div>
+          <p class="stat-desc">自主策劃跨班英語學習分享，系統化傳遞影響力</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <div class="stat-number">100%</div>
+          <div class="stat-label">自律執行與數位賦能</div>
+          <p class="stat-desc">自律運動管理・個人預算 App・AI 工具工作流</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D 科技立方體影像展示 (3D Cubic Showcase) -->
+  <section class="cube-section" id="gallery-3d">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-sub">INTERACTIVE 3D PERSPECTIVE</span>
+        <h2 class="section-title">3D 立方體・多維生活與視野</h2>
+        <p class="section-desc">
+          將真實生活、專案歷程與運動自律置入 3D 空間，水平旋轉呈現不同維度的實踐軌跡。
+        </p>
+      </div>
+
+      <div class="cube-stage-wrapper">
+        <div class="cube-viewport">
+          <div class="cube" id="rotating-cube">
+            <div class="cube-face face-front" id="face-0">
+              <div class="face-content">
+                <img src="assests/image/shoooot.jpg" alt="專案與競賽生活" id="img-face-0">
+                <div class="face-tag">專案與競賽紀錄</div>
+              </div>
+            </div>
+            <div class="cube-face face-right" id="face-1">
+              <div class="face-content">
+                <img src="assests/image/notion.jpg" alt="數位架構與系統" id="img-face-1">
+                <div class="face-tag">Notion 系統與思維</div>
+              </div>
+            </div>
+            <div class="cube-face face-back" id="face-2">
+              <div class="face-content">
+                <img src="assests/image/S__21233711.jpg" alt="運動與團隊生活" id="img-face-2">
+                <div class="face-tag">自律運動與生活</div>
+              </div>
+            </div>
+            <div class="cube-face face-left" id="face-3">
+              <div class="face-content">
+                <img src="assests/image/FB_IMG_1654683411132.jpg" alt="自我成長與探索" id="img-face-3">
+                <div class="face-tag">探索成長歷程</div>
+              </div>
+            </div>
+            <!-- 頂面與底面形成完整封閉金屬科技質感 -->
+            <div class="cube-face face-top">
+              <div class="face-cap"><i class="fa-solid fa-cubes-stacked"></i></div>
+            </div>
+            <div class="cube-face face-bottom">
+              <div class="face-cap"><i class="fa-solid fa-atom"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cube-controls">
+          <button class="cube-btn" id="cube-prev" title="向左旋轉"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="cube-btn cube-btn-play" id="cube-toggle" title="自動旋轉開關"><i class="fa-solid fa-pause"></i></button>
+          <button class="cube-btn" id="cube-next" title="向右旋轉"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <p class="cube-hint"><i class="fa-solid fa-arrows-left-right"></i> 可點擊按鈕或手動滑動旋轉，五張照片將持續循環切換</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心經歷文件 (Two-Column Alternating Layout) -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-sub">EXPERIENCE & ACHIEVEMENTS</span>
+        <h2 class="section-title">核心歷程・雙欄深度解析</h2>
+        <p class="section-desc">
+          萃取商業策略、數位創新、自律體能與國際影響力四大面向，以交錯漸層動態呈現。
+        </p>
+      </div>
+
+      <div class="timeline-container">
+
+        <!-- Card 1: 左文字，右漸層 -->
+        <div class="exp-card layout-text-left">
+          <div class="exp-text-col">
+            <div class="card-badge"><i class="fa-solid fa-chess"></i> 商業競賽 & 專案策劃</div>
+            <h3 class="card-heading">ATCC 商業競賽・PMI 專案決賽・系學會學術部</h3>
+            <div class="card-details">
+              <div class="detail-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>ATCC 全國大專商業競賽（社會 x 青年）：</strong>
+                  跨校系組成創新團隊，深度洞察產業痛點並提出創新方案，成功晉級複賽第二階段。
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>PMI 專案管理競賽（決賽隊伍代表）：</strong>
+                  歷經三個月高強度專案生命週期實作，在嚴謹時程內完成敏捷交付，獲選為決賽代表隊伍。
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>系學會學術部商業講座策劃：</strong>
+                  籌備大型商業論壇與企業參訪，建立標準化活動運營流程，大幅提升商學院同儕之專業連結。
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exp-gradient-col gradient-box-1">
+            <div class="gradient-glow"></div>
+            <div class="gradient-content">
+              <span class="grad-en">STRATEGY</span>
+              <span class="grad-amp">&</span>
+              <span class="grad-en">TEAMWORK</span>
+              <div class="grad-zh">商業洞察與領導協作</div>
+              <div class="grad-deco-line"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: 左漸層，右文字 -->
+        <div class="exp-card layout-text-right">
+          <div class="exp-gradient-col gradient-box-2">
+            <div class="gradient-glow"></div>
+            <div class="gradient-content">
+              <span class="grad-en">INNOVATION</span>
+              <div class="grad-zh">數位工具與 Side Project</div>
+              <div class="grad-subtext">BUDGET APP & AI WORKFLOW</div>
+              <div class="grad-deco-line"></div>
+            </div>
+          </div>
+          <div class="exp-text-col">
+            <div class="card-badge"><i class="fa-solid fa-laptop-code"></i> 數位產品 & 證照</div>
+            <h3 class="card-heading">個人預算管理 App・Notion 系統・AI 專業認證</h3>
+            <div class="card-details">
+              <div class="detail-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>個人預算管理 App（Side Project）：</strong>
+                  針對日常財務與預算痛點進行需求分析與使用者體驗設計，打造直覺易用的財務管理工具。
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>Notion 數位資產系統架構：</strong>
+                  建構個人化知識庫與專案管理儀表板，將碎片化資訊轉化為高效率工作流程。
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>AI 專業證照與工具賦能：</strong>
+                  持續精進生成式 AI、提示詞工程（Prompt Engineering）與自動化技術，賦能商業研究與分析。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: 左文字，右漸層 -->
+        <div class="exp-card layout-text-left">
+          <div class="exp-text-col">
+            <div class="card-badge"><i class="fa-solid fa-person-running"></i> 自律與體能突破</div>
+            <h3 class="card-heading">籃球隊歷練・自主體能管理・百米短跑冠軍</h3>
+            <div class="card-details">
+              <div class="detail-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>新北中山國中籃球隊歷練：</strong>
+                  在嚴格紮實的團隊體能與戰術訓練中，培養極佳的抗壓性、專注度與團隊溝通默契。
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>全方位自主體能管理：</strong>
+                  長期維持高強度運動規律，將運動自律內化為日常生活與學業專注的穩固基石。
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>校內 100 公尺短跑冠軍：</strong>
+                  在競技場上展現極致爆發力與速度追求，證明追求卓越的堅毅決心。
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exp-gradient-col gradient-box-3">
+            <div class="gradient-glow"></div>
+            <div class="gradient-content">
+              <span class="grad-en">DISCIPLINE</span>
+              <div class="grad-zh">自律運動與體能突破</div>
+              <div class="grad-subtext">STRENGTH & PERSEVERANCE</div>
+              <div class="grad-deco-line"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: 左漸層，右文字 -->
+        <div class="exp-card layout-text-right">
+          <div class="exp-gradient-col gradient-box-4">
+            <div class="gradient-glow"></div>
+            <div class="gradient-content">
+              <span class="grad-en">INFLUENCE</span>
+              <div class="grad-zh">影響力擴散與國際願景</div>
+              <div class="grad-subtext">GLOBAL VISION & IMPACT</div>
+              <div class="grad-deco-line"></div>
+            </div>
+          </div>
+          <div class="exp-text-col">
+            <div class="card-badge"><i class="fa-solid fa-earth-americas"></i> 知識傳播 & 願景</div>
+            <h3 class="card-heading">英語全校跨班分享・2027 法語檢定目標</h3>
+            <div class="card-details">
+              <div class="detail-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>高中全校英語跨班分享（觸及 >200人）：</strong>
+                  主動策劃系統化學習方法分享會，現場參與逾 70 人、累計影響破 200 人，展現知識傳播與公共表達力。
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>2027 國際化語言檢定目標：</strong>
+                  設定 2027 年前取得 TOEFL 高分與法語檢定，開拓外商與跨國商業諮詢之多語優勢。
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>商業價值共創：</strong>
+                  秉持「主動分享、創造共好」的核心理念，持續在各類組織中發揮實質正向影響力。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 倒數第二區塊：數位成果影片展示 (Video Showcase) -->
+  <section class="showcase-section" id="showcase">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-sub">DIGITAL APP & AI SHOWCASE</span>
+        <h2 class="section-title">數位工具成果展示</h2>
+        <p class="section-desc">
+          探索使用 ChatGPT 智慧工具打造流暢應用畫面與體驗的成果展示。
+        </p>
+      </div>
+
+      <div class="video-card-wrapper">
+        <div class="video-container">
+          <div class="video-glow-effect"></div>
+          <video id="feature-video" preload="metadata" playsinline controls>
+            <source src="assests/video/my video.mp4" type="video/mp4">
+            您的瀏覽器不支援 HTML5 影片播放。
+          </video>
+        </div>
+        <div class="video-caption">
+          <div class="caption-header">
+            <span class="badge-pink"><i class="fa-solid fa-sparkles"></i> AI Interaction Demo</span>
+            <span class="caption-title">ChatGPT APP 介面與流程演示</span>
+          </div>
+          <p class="caption-text">
+            透過 AI 輔助加速介面生成與邏輯梳理，展現商管思維與現代軟體工具的敏捷協同應用。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品集下載與聯絡資訊 (Portfolio & Footer) -->
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <div class="footer-cta-card">
+        <div class="cta-glow"></div>
+        <h2 class="cta-title">準備好開啟下一段商業與創新的對話了嗎？</h2>
+        <p class="cta-desc">
+          歡迎下載我的完整個人作品集，或透過以下方式與我聯繫，共同探討專案合作與商業發展機會。
+        </p>
+        <div class="cta-buttons">
+          <a href="assests/pdf/大二個人作品集_compressed.pdf" target="_blank" class="btn btn-gold">
+            <i class="fa-solid fa-download"></i>
+            <span>下載完整作品集 (PDF)</span>
+          </a>
+          <a href="mailto:eric910319@gmail.com" class="btn btn-outline-pink">
+            <i class="fa-solid fa-envelope"></i>
+            <span>發送 Email 聯繫</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-brand">
+          <span class="brand-crown"><i class="fa-solid fa-crown"></i></span>
+          <span class="brand-text">ERIC.FAN</span>
+        </div>
+        <p class="copyright">
+          © 2026 Eric Fan. All Rights Reserved. Crafted with Dark Gold Luxury & AI Tech.
+        </p>
+        <div class="footer-socials">
+          <a href="#hero" class="social-icon" title="回到頂部"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       右下角 24/7 AI 客服助理 (Eric 全天候服務機器人)
+       ========================================================================== -->
+  <!-- 浮動小小兵按鈕 (B) -->
+  <div class="chatbot-float-trigger" id="chatbot-trigger" title="點擊開啟 Eric 全天候服務機器人">
+    <div class="minion-btn-glow"></div>
+    <img src="assests/image/minion_avatar.png" alt="小小兵客服" class="minion-trigger-img">
+    <span class="minion-badge-dot"></span>
+  </div>
+
+  <!-- 聊天室視窗 (Chat Window) -->
+  <div class="chatbot-window" id="chatbot-window">
+    
+    <!-- 頂部標題列 -->
+    <div class="chat-header">
+      <div class="chat-header-title">
+        <span class="chat-header-minion">
+          <img src="assests/image/minion_avatar.png" alt="小小兵" class="header-minion-img">
+        </span>
+        <span class="chat-header-text">Eric 全天候服務機器人</span>
+      </div>
+      <div class="chat-header-actions">
+        <button class="chat-action-btn" id="chat-settings-toggle" title="API Key 設定與健康檢查">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+        <button class="chat-action-btn" id="chat-close-btn" title="關閉視窗">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- API Key 設定與健康檢查抽屜 -->
+    <div class="chat-settings-panel" id="chat-settings-panel">
+      <div class="settings-title">
+        <i class="fa-solid fa-key"></i>
+        <span>Gemini 3.7 / 2.0 Flash API 設定</span>
+      </div>
+      <div class="settings-input-group">
+        <input type="password" id="gemini-api-key-input" placeholder="請在此貼入 Gemini API Key (AIzaSy...)" autocomplete="off">
+        <button id="gemini-test-btn" class="btn-check-key">驗證連線</button>
+      </div>
+      <div class="settings-status-row">
+        <span class="status-indicator-dot" id="api-status-dot"></span>
+        <span class="status-text" id="api-status-text">未設定 API Key，請先貼入並驗證</span>
+      </div>
+    </div>
+
+    <!-- 訊息展示區 -->
+    <div class="chat-messages-body" id="chat-messages-body">
+      <!-- 預設機器人歡迎訊息 (B & C) -->
+      <div class="msg-row bot-row">
+        <div class="msg-avatar bot-avatar">
+          <img src="assests/image/minion_avatar.png" alt="Minion Bot">
+        </div>
+        <div class="msg-bubble bot-bubble">
+          <p>您好！我是 Eric 的 24/7 AI 客服助理 🍌</p>
+          <p>我可以為您解答關於 Eric 的<strong>商業競賽歷程、專案管理、AI 與 App 開發、自律運動習慣與未來職涯願景</strong>！</p>
+          <p class="sub-hint">請點擊上方 ⚙️ 確認已填妥 Gemini API Key，即可開始提問喔！</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 可以問的問題 (快捷建議按鈕) -->
+    <div class="chat-suggestions-wrapper">
+      <div class="suggestions-label">💡 可以問的問題：</div>
+      <div class="suggestions-chips">
+        <button class="suggestion-chip" data-question="請問 Eric 在 ATCC 與 PMI 商業競賽的經歷？">🏆 商業競賽經歷？</button>
+        <button class="suggestion-chip" data-question="Eric 開發過什麼 Side Project 或 App？">💻 個人預算 App 與專案？</button>
+        <button class="suggestion-chip" data-question="請介紹 Eric 的自律運動與籃球隊經歷？">🏀 籃球隊與體能冠軍？</button>
+        <button class="suggestion-chip" data-question="Eric 的高中英語跨班分享與未來 2027 目標是什麼？">🌍 影響力與 2027 願景？</button>
+      </div>
+    </div>
+
+    <!-- 底部輸入區域 -->
+    <div class="chat-input-container">
+      <div class="chat-input-main">
+        <textarea id="chat-textarea" placeholder="支援 ① Shift + Enter 換行  ② Enter 送出..." rows="2"></textarea>
+      </div>
+      <div class="chat-input-controls">
+        <button id="chat-send-btn" class="chat-btn btn-send" title="發送訊息">送出</button>
+        <button id="chat-clear-btn" class="chat-btn btn-clear" title="清除輸入或對話">清除</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js?v=20260901_9"></script>
+</body>
+</html>
