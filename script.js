@@ -258,6 +258,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
+     3.5. AI 成果區 16:9 照片導覽輪換 (1.5秒輪換機制)
+     ========================================================================== */
+  const aiGalleries = document.querySelectorAll('.gallery-16-9');
+  aiGalleries.forEach((gallery) => {
+    const slides = gallery.querySelectorAll('.gallery-slide');
+    if (slides.length > 1) {
+      let activeIndex = 0;
+      setInterval(() => {
+        slides[activeIndex].classList.remove('active');
+        activeIndex = (activeIndex + 1) % slides.length;
+        slides[activeIndex].classList.add('active');
+      }, 1500);
+    }
+  });
+
+
+  /* ==========================================================================
      4. 24/7 AI 客服助理 (Eric 全天候服務機器人)
      ========================================================================== */
   const chatTrigger = document.getElementById('chatbot-trigger');
@@ -406,9 +423,9 @@ document.addEventListener('DOMContentLoaded', () => {
    • 臺北大學企管系系學會學術部：統籌商業論壇與企業參訪，建立活動標準化運營流程。
 
 3. 數位專案與工具能力：
-   • 個人預算管理 App（Side Project）：針對日常財務管理痛點進行需求分析與介面流程設計。
-   • Notion 知識系統：建構個人化知識庫與專案管理看板。
-   • AI 應用與證照：掌握生成式 AI、提示詞工程（Prompt Engineering）與工作流自動化。
+   • 小綠人記帳 App（Side Project）：針對日常財務預算痛點設計，支援自訂每月金額上限，並打造小綠人動態主視覺，讓記帳更生動直覺。
+   • Notion 智慧知識與專案系統：建構模組化個人知識庫與專案管理看板，提升執行力。
+   • AI 商業工作流與提示詞系統：掌握生成式 AI、提示詞工程（Prompt Engineering）與工作流自動化。
 
 4. 運動經歷與自律習慣：
    • 新北中山國中籃球隊：接受團隊體能與戰術訓練，培養抗壓性與溝通協作能力。

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=20260928_1">
+  <link rel="stylesheet" href="style.css?v=20260928_2">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
         <a href="#about" class="nav-link">關於我</a>
         <a href="#gallery-3d" class="nav-link">3D 視界</a>
         <a href="#experience" class="nav-link">核心歷程</a>
-        <a href="#showcase" class="nav-link">數位成果</a>
+        <a href="#showcase" class="nav-link">AI成果區</a>
         <a href="#contact" class="nav-link nav-btn">下載作品集</a>
       </nav>
       <button class="mobile-toggle" id="mobile-toggle" aria-label="選單">
@@ -350,27 +350,103 @@
     </div>
   </section>
 
-  <!-- 倒數第二區塊：數位工具成果展示 (Digital Showcase) -->
+  <!-- 倒數第二區塊：AI成果區 (AI Showcase) -->
   <section class="showcase-section" id="showcase">
     <div class="container">
       <div class="section-header">
-        <span class="section-sub">DIGITAL APP & AI SHOWCASE</span>
-        <h2 class="section-title">數位工具成果展示</h2>
+        <span class="section-sub">AI & DIGITAL INNOVATION</span>
+        <h2 class="section-title">AI成果區</h2>
         <p class="section-desc">
-          探索使用 ChatGPT 智慧工具打造流暢應用畫面與體驗的成果展示。
+          結合商管洞察與 AI 工具賦能的實踐專案與數位產品。
         </p>
       </div>
 
-      <div class="video-card-wrapper">
-        <div class="video-caption">
-          <div class="caption-header">
-            <span class="badge-pink"><i class="fa-solid fa-sparkles"></i> AI Interaction Demo</span>
-            <span class="caption-title">ChatGPT APP 介面與流程演示</span>
+      <div class="ai-projects-list">
+
+        <!-- 專案 1: 小綠人記帳 -->
+        <div class="ai-project-card">
+          <!-- 雙欄左邊：16:9 照片導覽輪換區 (1.5秒輪換) -->
+          <div class="ai-card-gallery-col">
+            <div class="gallery-16-9" data-carousel-id="project-1">
+              <div class="gallery-slide-placeholder active">
+                <div class="placeholder-glow"></div>
+                <div class="placeholder-icon"><i class="fa-solid fa-leaf"></i></div>
+                <div class="placeholder-text">成果照馬上要出爐啦！</div>
+                <div class="placeholder-timer-bar"></div>
+              </div>
+            </div>
           </div>
-          <p class="caption-text">
-            透過 AI 輔助加速介面生成與邏輯梳理，展現商管思維與現代軟體工具的敏捷協同應用。
-          </p>
+          <!-- 雙欄右邊：說明欄 -->
+          <div class="ai-card-info-col">
+            <div class="ai-project-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> AI 產品設計</div>
+            <h3 class="ai-project-title">小綠人記帳</h3>
+            <p class="ai-project-desc">
+              自訂每月金額上限，設計小綠人主視覺，讓記帳更生動。
+            </p>
+            <div class="ai-project-tags">
+              <span class="p-tag">預算上限自訂</span>
+              <span class="p-tag">小綠人動態主視覺</span>
+              <span class="p-tag">直覺財務統計</span>
+            </div>
+          </div>
         </div>
+
+        <!-- 專案 2: Notion 智慧知識與專案系統 -->
+        <div class="ai-project-card">
+          <!-- 雙欄左邊：16:9 照片導覽輪換區 (1.5秒輪換) -->
+          <div class="ai-card-gallery-col">
+            <div class="gallery-16-9" data-carousel-id="project-2">
+              <div class="gallery-slide-placeholder active">
+                <div class="placeholder-glow"></div>
+                <div class="placeholder-icon"><i class="fa-solid fa-cubes"></i></div>
+                <div class="placeholder-text">成果照馬上要出爐啦！</div>
+                <div class="placeholder-timer-bar"></div>
+              </div>
+            </div>
+          </div>
+          <!-- 雙欄右邊：說明欄 -->
+          <div class="ai-card-info-col">
+            <div class="ai-project-badge"><i class="fa-solid fa-layer-group"></i> 數位資產架構</div>
+            <h3 class="ai-project-title">Notion 智慧知識與專案系統</h3>
+            <p class="ai-project-desc">
+              架構模組化個人知識庫與專案儀表板，將碎片化資訊流高效轉化為執行力。
+            </p>
+            <div class="ai-project-tags">
+              <span class="p-tag">模組化看板</span>
+              <span class="p-tag">跨專案連結</span>
+              <span class="p-tag">商業研究知識庫</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 專案 3: AI 商業工作流與提示詞系統 -->
+        <div class="ai-project-card">
+          <!-- 雙欄左邊：16:9 照片導覽輪換區 (1.5秒輪換) -->
+          <div class="ai-card-gallery-col">
+            <div class="gallery-16-9" data-carousel-id="project-3">
+              <div class="gallery-slide-placeholder active">
+                <div class="placeholder-glow"></div>
+                <div class="placeholder-icon"><i class="fa-solid fa-bolt"></i></div>
+                <div class="placeholder-text">成果照馬上要出爐啦！</div>
+                <div class="placeholder-timer-bar"></div>
+              </div>
+            </div>
+          </div>
+          <!-- 雙欄右邊：說明欄 -->
+          <div class="ai-card-info-col">
+            <div class="ai-project-badge"><i class="fa-solid fa-robot"></i> AI 工作流整合</div>
+            <h3 class="ai-project-title">AI 商業工作流與提示詞系統</h3>
+            <p class="ai-project-desc">
+              整合生成式 AI 與自動化流程，實現商業研究、資料萃取與報告產出的極致效率。
+            </p>
+            <div class="ai-project-tags">
+              <span class="p-tag">提示詞工程</span>
+              <span class="p-tag">商業分析自動化</span>
+              <span class="p-tag">多工具整合</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -478,7 +554,7 @@
       <div class="suggestions-label">💡 可以問的問題：</div>
       <div class="suggestions-chips">
         <button class="suggestion-chip" data-question="請問 Eric 在 ATCC 與 PMI 商業競賽的經歷？">🏆 商業競賽經歷？</button>
-        <button class="suggestion-chip" data-question="Eric 開發過什麼 Side Project 或 App？">💻 個人預算 App 與專案？</button>
+        <button class="suggestion-chip" data-question="Eric 開發過什麼 AI Side Project 或小綠人記帳 App？">🌱 小綠人記帳與 AI 專案？</button>
         <button class="suggestion-chip" data-question="請介紹 Eric 的自律運動與籃球隊經歷？">🏀 籃球隊與體能冠軍？</button>
         <button class="suggestion-chip" data-question="Eric 的高中英語跨班分享與未來 2027 目標是什麼？">🌍 影響力與 2027 願景？</button>
       </div>
@@ -497,6 +573,6 @@
 
   </div>
 
-  <script src="script.js?v=20260928_1"></script>
+  <script src="script.js?v=20260928_2"></script>
 </body>
 </html>
